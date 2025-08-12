@@ -1,14 +1,98 @@
-html body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    padding: 10px;
-    height: auto;
+html, body {
+    min-height: 105vh;
+    margin: 0;
 }
 
-input{
-    padding: 16px;
-    font-size: 16px;
-    border-radius: 20px;
-    position:fixed;
-    bottom: 100px;
+body{
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    background: #FF0099;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.input-wrapper {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+}
+
+input {
+  flex: 1; /* занимает всё свободное место */
+  padding: 16px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  text-align: center; /* placeholder по центру */
+  outline: none;
+  box-sizing: border-box;
+}
+
+#sendpic {
+  width: 40px; /* примерно 10% от 400px */
+  height: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+#firstView{
+    position: relative;
+    width: 100%;
+    overflow: visible;
+     perspective: 800px;
+     height: 450px;
+}
+
+#firstView img{
+    width: 35%;
+    position: absolute;
+    transition: transform 0.5s easy;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(0,0,0,0.1));
+
+}
+
+.jul1{
+    top: 70%;
+    right: 10%;
+    transform-origin: center center;
+    transform: rotateY(-20deg);
+}
+
+.jul2{
+    top: 90%;
+    left: 10%;
+    transform-origin: center center;
+    transform: rotateY(20deg);
+}
+
+.jul3{
+    top: 50%;
+    left: 20%;
+    transform-origin: center center;
+    transform: rotateY(20deg);
+}
+
+
+h1{
+    position: absolute;
+    font-size: 40px;
+    text-align: center;
+    top: 10%;
+    left: 13%;
+    color:whitesmoke;
+    
 }
